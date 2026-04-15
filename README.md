@@ -28,24 +28,28 @@ Se não tem `git`, clique no botão verde **"Code"** no topo da página do GitHu
 
 ### Passo 2 — Copiar a skill para a pasta do Claude Code
 
-Abra o terminal e rode o comando abaixo, trocando `nome-da-skill` pelo nome da pasta da skill que você quer instalar (ex: `handoff`):
+Primeiro, crie a pasta de skills do Claude Code (só precisa fazer isso uma vez):
 
 ```bash
-cp -r nome-da-skill/ ~/.claude/skills/nome-da-skill/
+mkdir -p ~/.claude/skills/
 ```
 
-Exemplo real para instalar a skill de handoff:
+Depois, copie a pasta da skill que você quer instalar. Exemplo para a skill de handoff:
 
 ```bash
 cp -r handoff/ ~/.claude/skills/handoff/
 ```
 
-> **Onde fica essa pasta?**
+Para outra skill, troque `handoff` pelo nome da pasta:
+
+```bash
+cp -r nome-da-skill/ ~/.claude/skills/nome-da-skill/
+```
+
+> **Global vs Local**
 >
 > - `~/.claude/skills/` = instalação **global** (funciona em qualquer projeto)
 > - `.claude/skills/` (dentro de um projeto) = instalação **local** (funciona só naquele projeto)
->
-> Se a pasta `~/.claude/skills/` não existir, crie com `mkdir -p ~/.claude/skills/`.
 
 ### Passo 3 — Usar
 
